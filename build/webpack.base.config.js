@@ -22,7 +22,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': resolve('src'),
+      // '@': resolve('src'),
       'public': path.resolve(__dirname, '../public'),    
       'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' для webpack 1 
     }
