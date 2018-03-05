@@ -32,12 +32,18 @@
     "route-cache": "0.4.3",
     "serve-favicon": "^2.4.5",
     "vue": "^2.5.3",
+    "vue-material": "^1.0.0-beta-7",
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.3",
+    "vuetify": "^1.0.4",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.3.14",
+    "@storybook/addon-links": "^3.3.14",
+    "@storybook/addons": "^3.3.14",
+    "@storybook/vue": "^3.3.14",
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -46,6 +52,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-vue": "^2.0.1",
     "chokidar": "^1.7.0",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
@@ -64,11 +71,6 @@
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.20.0",
     "webpack-merge": "^4.1.1",
-    "webpack-node-externals": "^1.6.0",
-    "@storybook/vue": "^3.3.14",
-    "@storybook/addon-actions": "^3.3.14",
-    "@storybook/addon-links": "^3.3.14",
-    "@storybook/addons": "^3.3.14",
-    "babel-preset-vue": "^2.0.1"
+    "webpack-node-externals": "^1.6.0"
   }
 }

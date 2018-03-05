@@ -3,6 +3,17 @@ import App from './App.vue'
 import { createStore } from './store'
 import { createRouter } from './router'
 import { sync } from 'vuex-router-sync'
+
+import * as components from './components'
+
+import Vuetify from 'vuetify'
+ 
+Vue.use(Vuetify)
+Vue.use(components)
+
+// index.js or main.js
+import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+
 // import titleMixin from './util/title'
 // import * as filters from './util/filters'
 

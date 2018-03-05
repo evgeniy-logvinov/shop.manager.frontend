@@ -28,6 +28,10 @@ export function createRouter() {
         path: '/hello',
         component: Pages.Hello
       },
+      // {
+      //   path: '/myapp',
+      //   component: Pages.MyApp
+      // },
       {
         path: '/',
         redirect: '/hello'

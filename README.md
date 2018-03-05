@@ -18,3 +18,5 @@ npm i -g @storybook/cli
 cd my-react-app
 getstorybook
 ```
+# run storybook for UI components development with hot reload at localhost:6006
+yarn storybook

@@ -1,35 +1,38 @@
-/* eslint-disable react/react-in-jsx-scope */
+import { storiesOf, addDecorator } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
+import { withKnobs, text } from '@storybook/addon-knobs'
+import * as components from 'src/components'
+import { CenterDecorator, MinWidth } from './decorators'
+import 'src/styles/_global.scss'
 
-import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+addDecorator(withKnobs)
 
-import MyButton from './MyButton.vue';
-import Welcome from './Welcome.vue';
+// storiesOf('widgets/FormComponent', module)
+//   .addDecorator(MinWidth(400))
+//   .addDecorator(CenterDecorator)
+//   .add('normal', () => ({
+//     components,
+//     render (h) {
+//       return <form-component />
+//     }
+//   }))
 
-storiesOf('Welcome', module).add('to Storybook', () => ({
-  components: { Welcome },
-  template: '<welcome :showApp="action" />',
-  methods: { action: linkTo('Button') },
-}));
-
-storiesOf('Button', module)
-  .add('with text', () => ({
-    components: { MyButton },
-    template: '<my-button @click="action">Hello Button</my-button>',
-    methods: { action: action('clicked') },
-  }))
-  .add('with JSX', () => ({
-    components: { MyButton },
-    render() {
-      return <my-button onClick={this.action}>With JSX</my-button>;
+storiesOf('components/ButtonComponent', module)
+  .addDecorator(CenterDecorator)
+  .add('normal', () => ({
+    components,
+    render (h) {
+      return <button-component onClick={this.logEvent} label={text('label', 'Нажать на кнопку')} />
     },
-    methods: { action: linkTo('clicked') },
+    methods: { logEvent: action('clicked') }
   }))
-  .add('with some emoji', () => ({
-    components: { MyButton },
-    template: '<my-button @click="action">😀 😎 👍 💯</my-button>',
-    methods: { action: action('clicked') },
-  }));
 
-/* eslint-enable react/react-in-jsx-scope */
+storiesOf('components/InputComponent', module)
+  .addDecorator(CenterDecorator)
+  .add('normal', () => ({
+    components,
+    render (h) {
+      return <input-component onInput={this.logEvent} label={text('label', 'Поле')} />
+    },
+    methods: { logEvent: action('input') }
+  }))
