@@ -8,7 +8,7 @@
 					<v-toolbar-title>{{ title }}</v-toolbar-title>
 					<v-spacer></v-spacer>
 					<v-btn icon>
-						<v-icon>more_vert</v-icon>
+						<v-icon>{{ createItemIcon }}</v-icon>
 					</v-btn>
 				</v-toolbar>
 				<v-list>
@@ -17,13 +17,16 @@
 							<v-list-tile-content>
 								<v-list-tile-title>{{ item.title }}</v-list-tile-title>
 							</v-list-tile-content>
+							<v-btn icon>
+								<v-icon>{{ itemsIcon }}</v-icon>
+							</v-btn>
 						</v-list-tile>
-						<v-list-tile v-for="subItem in item.items" :key="subItem.title" @click="alert('test')">
-							<v-list-tile-content>
+						<v-list-tile v-for="subItem in item.items" :key="subItem.title" @click="">
+							<v-list-tile-content @click="subItem.done = !subItem.done">
 								<v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
 							</v-list-tile-content>
 							<v-list-tile-action>
-								<v-icon>{{ subItem.action }}</v-icon>
+									<v-checkbox v-model="subItem.done"></v-checkbox>
 							</v-list-tile-action>
 						</v-list-tile>
 					</v-list-group>

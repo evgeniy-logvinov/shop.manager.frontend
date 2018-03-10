@@ -40,7 +40,12 @@ storiesOf('Components', module)
   .add('listWithItems', () => ({
     components,
     render (h) {
-      return <list-with-items itemsIcon={text('items_icon', 'shopping_basket')} title={text('title', 'Baskets')} items={object('items', listWithItems)}/>
+      return <list-with-items 
+      createItemIcon={text('create_item_icon', 'add_shopping_cart')} 
+      itemsIcon={text('items_icon', 'shopping_basket')} 
+      subItemsIcon={text('sub_items_icon', 'done')} 
+      title={text('title', 'Baskets')} 
+      items={object('items', listWithItems)}/>
     },
     methods: { logEvent: action('input') }
   }))

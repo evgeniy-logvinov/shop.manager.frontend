@@ -5,9 +5,11 @@ export default [{
 	items: [{
 		id: '1',
 		title: 'Milk',
+		done: false
 	}, {
 		id: '2',
-		title: 'Beer'
+		title: 'Beer',
+		done: false
 	}]
 }, {
 	id: '2',
@@ -15,9 +17,11 @@ export default [{
 	items: [{
 		id: '3',
 		title: 'Bread',
+		done: false
 	}, {
 		id: '2',
-		title: 'Beer'
+		title: 'Beer',
+		done: false
 	}]
 },{
 	id: '3',
@@ -25,8 +29,10 @@ export default [{
 	items: [{
 		id: '4',
 		title: 'Water',
+		done: false
 	}, {
 		id: '2',
-		title: 'Beer'
+		title: 'Beer',
+		done: true
 	}]
 },]

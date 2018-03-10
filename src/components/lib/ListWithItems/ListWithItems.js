@@ -11,6 +11,12 @@ export default {
 		},
 		itemsIcon: {
 			type: String
+		},
+		subItemsIcon: {
+			type: String
+		},
+		createItemIcon: {
+			type: String
 		}
 	},
 	methods: {
