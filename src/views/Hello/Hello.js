@@ -1,6 +1,7 @@
 import {
-	LeftMenu
-} from '@/components'
+	LeftMenu,
+	Baskets
+} from 'src/components'
 
 export default {
 	name: 'hello',
@@ -10,6 +11,7 @@ export default {
 		}
 	},
 	components: {
-		LeftMenu
+		LeftMenu, 
+		Baskets
 	}
 }

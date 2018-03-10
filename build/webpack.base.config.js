@@ -22,7 +22,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      // '@': resolve('src'),
+      'src': path.resolve('src'),
       'public': path.resolve(__dirname, '../public'),    
       'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' для webpack 1 
     }
@@ -57,7 +57,15 @@ module.exports = {
               fallback: 'vue-style-loader'
             })
           : ['vue-style-loader', 'css-loader']
-      }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
     ]
   },
   performance: {

@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
 
-body {
-  font-family: Roboto;
-}
+@include md-register-theme("default", (
+  primary: md-get-palette-color(blue, A200), // The primary color of your application
+  accent: md-get-palette-color(red, A200), // The accent and secondary color
+  theme: dark // This can be dark or light
+));
+
+@import "~vue-material/dist/theme/all"; // Apply the theme
