@@ -6,48 +6,32 @@ import { linkTo } from '@storybook/addon-links';
 
 import { withKnobs, text, boolean, object } from '@storybook/addon-knobs'
 
-import * as components from 'src/components'
-import { listItems, menuItems, listWithItems } from 'src/static/'
+// import * as Components from 'src/components'
+// import * as Pages from 'src/pages'
+
+import components from './lib/components'
+import partials from './lib/partials'
+import pages from './lib/pages'
+import widgets from './lib/widgets'
+
 import { CenterDecorator, MinWidth } from './decorators'
+
 import Vue from 'vue'
 import Vuetify from 'vuetify'
     
 Vue.use(Vuetify)
+// Vue.use(Components)
+// Vue.use(Pages)
 
 // index.js or main.js
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 
 addDecorator(withKnobs)
 
-storiesOf('Components', module)
-  .addDecorator(withKnobs)
-  .addDecorator(MinWidth(400))
-  .addDecorator(CenterDecorator)
-  .add('leftMenu', () => ({
-  components,
-  render (h) {
-    return <left-menu onInput={this.logEvent} items={object('items', menuItems)} mini={ boolean('mini', true)}/>
-  },
-  methods: { logEvent: action('input') }
-})) 
-  .add('list', () => ({
-    components,
-    render (h) {
-      return <list items={object('items', listItems)}/>
-    },
-    methods: { logEvent: action('input') }
-  }))
-  .add('listWithItems', () => ({
-    components,
-    render (h) {
-      return <list-with-items 
-      createItemIcon={text('create_item_icon', 'add_shopping_cart')} 
-      itemsIcon={text('items_icon', 'shopping_basket')} 
-      subItemsIcon={text('sub_items_icon', 'done')} 
-      title={text('title', 'Baskets')} 
-      items={object('items', listWithItems)}/>
-    },
-    methods: { logEvent: action('input') }
-  }))
+components()
+partials()
+pages()
+widgets()
+
 
 /* eslint-enable react/react-in-jsx-scope */

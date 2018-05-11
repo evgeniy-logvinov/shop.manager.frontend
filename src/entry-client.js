@@ -22,7 +22,9 @@ Vue.mixin({
   }
 })
 
-const { app, router, store } = createApp()
+let context = null
+
+const { app, router, store } = createApp({ mode: 'client', context })
 
 // prime the store with server-initialized state.
 // the state is determined during SSR and inlined in the page markup.

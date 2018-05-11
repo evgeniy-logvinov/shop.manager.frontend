@@ -28,9 +28,9 @@ import './styles/_global.scss'
 
 // Expose a factory function that creates a fresh set of store, router,
 // app instances on each call (which is called for each SSR request)
-export function createApp () {
+export function createApp ({ mode, context }) {
   // create store and router instances
-  const store = createStore()
+  const store = createStore(mode, context)
   const router = createRouter()
 
   // sync the router with the vuex store.
