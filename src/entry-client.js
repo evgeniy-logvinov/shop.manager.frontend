@@ -23,6 +23,11 @@ Vue.mixin({
 })
 
 let context = null
+if (window.__PUBLIC_CONFIG__) {
+	context = {
+			publicConfig: window.__PUBLIC_CONFIG__,
+	}
+}
 
 const { app, router, store } = createApp({ mode: 'client', context })
 

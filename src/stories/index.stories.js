@@ -18,7 +18,9 @@ import { CenterDecorator, MinWidth } from './decorators'
 
 import Vue from 'vue'
 import Vuetify from 'vuetify'
-    
+import VeeValidate from 'vee-validate'
+
+Vue.use(VeeValidate)
 Vue.use(Vuetify)
 // Vue.use(Components)
 // Vue.use(Pages)

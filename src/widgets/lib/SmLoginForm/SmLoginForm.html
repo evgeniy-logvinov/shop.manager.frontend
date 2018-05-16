@@ -1,6 +1,6 @@
-<div class="sm-login-form">
-	<sm-text-field class="login" :value="login"></sm-text-field>
-	<sm-text-field class="password"></sm-text-field>
-	<sm-button :color="success" class="ok">sign in</sm-button>
-	<sm-button class="cancel">cancel</sm-button>
-</div>
+<sm-form>
+	<sm-text-field class="login" :required='true'></sm-text-field>
+	<sm-text-field class="password" required></sm-text-field>
+	<sm-button color="info" class="signUp" @click="signUp">sign Up</sm-button>
+	<sm-button color="success" class="signIn" @click="signIn">sign in</sm-button>
+</sm-form>
