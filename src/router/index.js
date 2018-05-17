@@ -34,7 +34,13 @@ export function createRouter() {
 			// },
 			{
 				path: '/',
+				name: 'login',
 				component: Pages.Login,
+			},
+			{
+				path: '/baskets',
+				name: 'baskets',
+				component: Pages.Baskets,
 			}
 			// {
 			//   path: '/',

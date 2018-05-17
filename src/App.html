@@ -1,25 +1,76 @@
 <section>
-	<v-app dark>
-		<div id="app"></div>
+	<div id="app">
+		<v-app id="inspire" dark>
+			<v-navigation-drawer clipped fixed v-model="drawer" :mini-variant.sync="mini" app>
+				<v-list dense>
+					<v-list-tile @click="goTo('/')">
+						<v-list-tile-action>
+							<v-icon>shopping_cart</v-icon>
+						</v-list-tile-action>
+						<v-list-tile-content>
+							<v-list-tile-title>Login</v-list-tile-title>
+						</v-list-tile-content>
+					</v-list-tile>
+					<v-list-tile @click="goTo('baskets')">
+						<v-list-tile-action>
+							<v-icon>settings</v-icon>
+						</v-list-tile-action>
+						<v-list-tile-content>
+							<v-list-tile-title>Baskets</v-list-tile-title>
+						</v-list-tile-content>
+					</v-list-tile>
+				</v-list>
+			</v-navigation-drawer>
+			<v-toolbar app fixed clipped-left>
+				<v-toolbar-side-icon @click.stop="mini = !mini"></v-toolbar-side-icon>
+				<v-toolbar-title>{{title}}</v-toolbar-title>
+			</v-toolbar>
+			<v-content>
+				<v-container fluid fill-height>
+					<v-fade-transition mode="out-in">
+						<router-view></router-view>
+					</v-fade-transition>
+					<!-- <v-layout justify-center align-center>
+					<v-flex shrink>
+						<v-tooltip right>
+							<v-btn icon large :href="source" target="_blank" slot="activator">
+								<v-icon large>code</v-icon>
+							</v-btn>
+							<span>Source</span>
+						</v-tooltip>
+					</v-flex>
+				</v-layout> -->
+				</v-container>
+			</v-content>
+			<v-footer app fixed>
+				<span>&copy; 2017</span>
+			</v-footer>
+		</v-app>
+		<!-- <v-app dark> -->
+
+
+		<!-- <div id="app"></div>
 		<header class="header">
 			<nav class="inner">
-				<router-link to="/" exact>
-					<!-- <img class="logo" src="~public/logo-48.png" alt="logo"> -->
-				</router-link>
-				<!-- <router-link to="/top">Top</router-link>
+				<router-link to="/" exact> -->
+		<!-- <img class="logo" src="~public/logo-48.png" alt="logo"> -->
+		<!-- </router-link> -->
+		<!-- <router-link to="/baskets">Baskets</router-link> -->
+		<!-- <router-link to="/top">Top</router-link>
         <router-link to="/new">New</router-link>
         <router-link to="/show">Show</router-link>
         <router-link to="/ask">Ask</router-link> -->
-				<!-- <router-link to="/hello">Hello</router-link>
+		<!-- <router-link to="/hello">Hello</router-link>
         <router-link to="/hello">Hello</router-link> -->
-				<!-- <a class="github" href="https://github.com/vuejs/vue-hackernews-2.0" target="_blank" rel="noopener"> -->
-				<!-- Built with Vue.js
+		<!-- <a class="github" href="https://github.com/vuejs/vue-hackernews-2.0" target="_blank" rel="noopener"> -->
+		<!-- Built with Vue.js
         </a> -->
-			</nav>
+		<!-- </nav>
 		</header>
 		<transition name="fade" mode="out-in">
 			<router-view class="view"></router-view>
 		</transition>
-		</div>
-	</v-app>
+		</div> -->
+		<!-- </v-app> -->
+	</div>
 </section>

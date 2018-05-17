@@ -2,9 +2,10 @@ import _ from 'lodash'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import ConfigStore from './modules/ConfigStore.js'
+import BasketsStore from './modules/BasketsStore.js'
 import HeadersServer from './modules/Headers.server'
 import HeadersClient from './modules/Headers.client'
-import { Config, Cookies } from 'src/store/constants'
+import { Config, Cookies, Baskets } from 'src/store/constants'
 import { SmError } from 'src/errors'
 // import actions from './actions'
 // import mutations from './mutations'
@@ -36,6 +37,7 @@ export function createStore(mode, context) {
 
 	Store.registerModule(Config.MODULE_NAME, new ConfigStore())
 	Store.registerModule(Cookies.MODULE_NAME, cookiesModule)
+	Store.registerModule(Baskets.MODULE_NAME, new BasketsStore())
 
 	if (context.publicConfig) {
 		Store.commit(Config.SET, context.publicConfig)

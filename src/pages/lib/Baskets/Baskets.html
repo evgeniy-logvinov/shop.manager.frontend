@@ -1,6 +1,17 @@
 <section id="baskets">
-	<v-layout row>
-		<!-- <v-flex xs12 sm6 offset-sm3> -->
+	<v-data-table :headers="headers" :items="desserts" :loading="true" class="elevation-1">
+		<v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
+		<template slot="items" slot-scope="props">
+			<td>{{ props.item.name }}</td>
+			<td class="text-xs-right">{{ props.item.calories }}</td>
+			<td class="text-xs-right">{{ props.item.fat }}</td>
+			<td class="text-xs-right">{{ props.item.carbs }}</td>
+			<td class="text-xs-right">{{ props.item.protein }}</td>
+			<td class="text-xs-right">{{ props.item.iron }}</td>
+		</template>
+	</v-data-table>
+	<!-- <v-layout row>
+		<v-flex xs12 sm6 offset-sm3>
 		<v-flex>
 			<v-card>
 				<v-toolbar color="cyan" dark>
@@ -28,5 +39,5 @@
 				</v-list>
 			</v-card>
 		</v-flex>
-	</v-layout>
+	</v-layout> -->
 </section>

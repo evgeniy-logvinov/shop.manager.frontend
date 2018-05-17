@@ -12,4 +12,9 @@ export default {
 			type: String,
 		}
 	},
+	methods: {
+		onInput(val) {
+			this.$emit('input', val)
+		}
+	}
 }

@@ -1,8 +1,8 @@
 {
-    "public": {
-        "title": "Shop manager",
-        "name": "sm"        
-    },
-    "private": {        
-    }
+  "public": {
+    "title": "Shop manager",
+    "name": "sm",
+    "backend": "http://localhost:8088"
+  },
+  "private": {}
 }

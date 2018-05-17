@@ -1,6 +1,10 @@
 <sm-form>
-	<sm-text-field class="login" :required='true'></sm-text-field>
-	<sm-text-field class="password" required></sm-text-field>
+	<sm-text-field class="login" :required='true' v-model="email"></sm-text-field>
+	<sm-text-field class="password" required v-model="password"></sm-text-field>
 	<sm-button color="info" class="signUp" @click="signUp">sign Up</sm-button>
 	<sm-button color="success" class="signIn" @click="signIn">sign in</sm-button>
+	<!-- <v-text-field class="login" :required='true' v-model="value" :value="'aaaaa'"></v-text-field>
+	<v-text-field class="password" required></v-text-field>
+	<v-btn color="info" class="signUp" @click="signUp">sign Up</v-btn>
+	<v-btn color="success" class="signIn" @click="signIn">sign in</v-btn> -->
 </sm-form>

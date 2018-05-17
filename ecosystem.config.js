@@ -17,7 +17,7 @@ module.exports = {
 	},
 	{
 		name: 'shop-manager-stories',
-		script: 'storybook',
+		script: 'yarn storybook',
 		watch: true,
 	}]
 }
