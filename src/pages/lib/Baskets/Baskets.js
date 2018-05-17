@@ -4,7 +4,7 @@ import { Baskets } from 'src/store/constants'
 export default {
 	name: 'baskets',
 	created() {
-		this.store.commit(Baskets.SET)
+		// this.store.commit(Baskets.SET)
 	},
 	data() {
 		return {
