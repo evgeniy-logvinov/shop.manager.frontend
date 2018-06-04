@@ -51,6 +51,7 @@ export default {
 		},
 		signUp() {
 			console.log('sign up')
+			this.$router.push('sign_up')
 		}
 	}
 }
